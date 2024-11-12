@@ -1,11 +1,11 @@
 # Site settings
-title: Freelancer
-email: your-email@domain.com
+title: Kevin Niu
+email: niukevins@gmail.com
 url: https://kevinsniu@github.io
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-keywords: "your keywords, separated by commas"
-skills: "Web Developer - Graphic Artist - User Experience Designer"
-meta_author: LastName FirstName
+description: "Kevin Niu's Digital Portfoilio"
+keywords: "georgia tech, computer engineer"
+skills: "Computer Engineer - Roboticist"
+meta_author: Niu Kevin
 
 # Google webmaster tools
 google_verify:
@@ -32,7 +32,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
+  copyright: Kevin Niu
   location: Location
   social: Around the Web
   credits: Credits
