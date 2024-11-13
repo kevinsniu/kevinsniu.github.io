@@ -19,4 +19,3 @@ client: The Client
 category: Web Development
 description: The description of the project
 ---------
-For more details, read the [documentation](http://jekyllrb.com/)
