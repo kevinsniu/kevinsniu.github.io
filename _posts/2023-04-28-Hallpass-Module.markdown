@@ -1,11 +1,11 @@
 ---
 layout: default
-modal-id: 4
-date: 2014-07-15
+modal-id: 3
+date: 2023-04-28
 img: game.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
+project-date: April 2023
+client: Johns Creek High School
 category: Web Development
 description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
 ---
