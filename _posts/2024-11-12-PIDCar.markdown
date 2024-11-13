@@ -1,0 +1,11 @@
+---
+layout: default
+modal-id: 2
+date: 2024-11-12
+img: cake.png
+alt: image-alt
+project-date: January 2024 – May 2024
+client: University of Illinois Urbana-Champaign
+category: Web Development
+description: Designed an analog PID controller using op-amps on a custom motor-driven car to implement braking such that the car will halt at a near-zero distance from any barrier and at any initial velocity. Verified PID controller behavior against simulated voltages in Falstad using Keysight oscilloscope to guarantee consistent system behavior through hundreds of repetitions. 
+---
