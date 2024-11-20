@@ -7,5 +7,5 @@ alt: image-alt
 project-date: November 2024
 client: GT RoboJackets
 category: Autodesk Inventor, Circuit Design, Soldering, Brushed Motor Control and Construction
-description: In Progress
+description: 3lb Combat Robot sponsored by Georgia Tech's RoboJackets. This robot has an in-built hub motor for the drum spinner and four-wheel drive for maximum maneuverability. 
 ---
