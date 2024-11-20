@@ -2,7 +2,7 @@
 layout: default
 modal-id: 2
 date: 2022-12-08
-img: circus.png
+img: solararray.jpg
 alt: image-alt
 project-date: December 2022
 client: Johns Creek High School
