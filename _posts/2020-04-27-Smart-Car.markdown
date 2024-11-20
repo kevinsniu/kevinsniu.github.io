@@ -5,7 +5,7 @@ date: 2020-04-27
 img: smartcar.png
 alt: image-alt
 project-date: April 2020
-client: Start Bootstrap
+client: Johns Creek High School
 category: Web Development
-description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+description: Designed, manufactured, and tested battery-operated car equipped with custom Ping Pong turret. Integrated mecanum drivetrain with omni-directional drive capabilities. Integrated flywheels and OpenCV for turret targeting. Used Virtual Network Computing with custom Python GUI for car control and data visualization. 
 ---
