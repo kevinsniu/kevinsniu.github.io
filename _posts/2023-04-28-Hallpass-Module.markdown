@@ -2,7 +2,7 @@
 layout: default
 modal-id: 3
 date: 2023-04-28
-img: game.png
+img: hallpass.jpg
 alt: image-alt
 project-date: April 2023
 client: Johns Creek High School
