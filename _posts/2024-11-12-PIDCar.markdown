@@ -2,10 +2,17 @@
 layout: default
 modal-id: 4
 date: 2024-11-12
-img: cake.png
+img: pidcar.jpg
 alt: image-alt
 project-date: January 2024 – May 2024
 client: University of Illinois Urbana-Champaign
-category: Web Development
-description: Designed an analog PID controller using op-amps on a custom motor-driven car to implement braking such that the car will halt at a near-zero distance from any barrier and at any initial velocity. Verified PID controller behavior against simulated voltages in Falstad using Keysight oscilloscope to guarantee consistent system behavior through hundreds of repetitions. 
+category: Circuit Design, Arduino, 3D Printing, Soldering, Oscilloscope
+description: The purpose of the car is to stop exactly at a set distance away from the wall regardless of initial velocity and distance. This goal is achieved by using an analog PID controller comprised of op-amps and other passive circuits. The car uses an ultrasonic distance sensor and Arduino to linearly convert the distance to an analog voltage.
+The P-term adjusts the output voltage based on the error and gain applied. This circuit is created using an inverting op-amp and two resistors.
+The I-term sums the instantaneous error from the P-term and forces the controller to reach the setpoint, since the P-term will never as it is proportional. This circuit is created using an integrating op-amp, resistor, and capacitor.
+The D-term adjusts the rate at which the error is corrected. This circuit is created using a derivating op-amp, resistor and capacitor.
+An 18v difference from two 9v batteries is used to power the terms of the controller, while 5v is used to power the 555 timer as the H-bridge has a Vmax of 5v.
+An Arduino serves as the intermediary, converting digital signals from the ultrasonic sensor to analog for the PID circuit and vice versa for motor control, encapsulating the project's integration of digital and analog technologies.
+An Ultrasonic Distance Sensor is pivotal for real-time distance measurement, feeding data into the PID controller to determine the car's proximity to obstacles and adjust motor operation accordingly.
+Motor drivers translate the control signals from the Arduino into action, precisely managing the motors' speed and direction to achieve the desired stopping behavior.
 ---
