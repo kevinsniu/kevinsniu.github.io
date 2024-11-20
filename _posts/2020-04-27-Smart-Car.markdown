@@ -6,6 +6,6 @@ img: smartcar.png
 alt: image-alt
 project-date: April 2020
 client: Johns Creek High School
-category: Web Development
+category: Arduino, Soldering, Python, Brushed Motor Control, OpenCV
 description: Designed, manufactured, and tested battery-operated car equipped with custom Ping Pong turret. Integrated mecanum drivetrain with omni-directional drive capabilities. Integrated flywheels and OpenCV for turret targeting. Used Virtual Network Computing with custom Python GUI for car control and data visualization. 
 ---
