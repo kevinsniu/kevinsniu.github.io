@@ -2,7 +2,7 @@
 layout: default
 modal-id: 1
 date: 2020-04-27
-img: submarine.png
+img: smartcar.png
 alt: image-alt
 project-date: April 2020
 client: Start Bootstrap
