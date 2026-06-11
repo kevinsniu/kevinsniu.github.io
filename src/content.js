@@ -31,12 +31,12 @@ export const entries = [
       {
         heading: "Overview",
         body:
-          "Mochi is the my first personal combat robot.",
+          "Mochi is my first personal combat robot.",
       },
       {
-        heading: "Design",
+        heading: "Background",
         body:
-          "Add design notes here. Put images in public/projects/mochi/ and reference them in the images array.",
+          "Details coming soon!",
         image: "",
         imageAlt: "Mochi design image",
         images: [
@@ -45,7 +45,7 @@ export const entries = [
         ],
       },
     ],
-    tags: ["Robotics"],
+    tags: ["Autodesk Inventor", "3D Printing", "2-Axis Mill", "Lathe", "CNC Router", "Waterjet", "Soldering"],
     href: "https://github.com/niukevins",
   },
   {
@@ -61,18 +61,26 @@ export const entries = [
       {
         heading: "Overview",
         body:
-          "Overview here",
+          "Wacki is my first 12lb combat robot, a significant step up from my previous 3lb robot, Freaki. ",
       },
       {
-        heading: "Design",
+        heading: "Background",
         body:
           "Notes here",
         images: [
-          { src: "", alt: "Picture", caption: "Caption." },
+          { src: "projects/wacki/wacki.JPG", alt: "Wacki at April 2026 NHRL", caption: "Wacki at April 2026 NHRL" },
+        ],
+      },
+      {
+        heading: "Background",
+        body:
+          "Notes here",
+        images: [
+          { src: "projects/wacki/wacki-bomb.JPG", alt: "Wacki's titanium arm twists under load", caption: "Wacki's titanium arm twists under load" },
         ],
       },
     ],
-    tags: ["Robotics"],
+    tags: ["Autodesk Inventor", "3D Printing", "2-Axis Mill", "Lathe", "CNC Router", "Waterjet", "Soldering"],
     href: "https://github.com/niukevins",
   },
   {
@@ -80,7 +88,7 @@ export const entries = [
     label: "Web Development",
     title: "Bevy",
     date: "September 2025",
-    coverImage: "projects/bevy/",
+    coverImage: "projects/bevy/bevy.png",
     coverAlt: "bevy cover image",
     body:
       "Bevy makes it easy to share what you’re sipping and discover fresh ideas from a community of enthusiasts.",
@@ -99,7 +107,7 @@ export const entries = [
         ],
       },
     ],
-    tags: ["Robotics"],
+    tags: ["Python", "JavaScript", "React", "Node.js", "SQL"],
     href: "https://github.com/niukevins",
   },
   {
@@ -149,7 +157,7 @@ export const entries = [
         ],
       },
       {
-        heading: "Iteration 2: Freakiii",
+        heading: "Iteration 3: Freakiii",
         body: [
           "Freakiii features a completely redesigned hub motor with complete shock isolation and a more robust housing design. The updated design addresses the durability and reliability issues experienced with previous iterations while delivering improved performance.",
           "[UPDATED] Drive Motors: Just 'Cuz Robotics Blitz Pro 2306",
@@ -161,7 +169,7 @@ export const entries = [
         ],
       },
     ],
-    tags: ["Robotics"],
+    tags: ["Autodesk Inventor", "3D Printing", "2-Axis Mill", "Lathe", "CNC Router", "Waterjet", "Soldering"],
     href: "https://github.com/niukevins",
   },
   {
@@ -172,19 +180,48 @@ export const entries = [
     coverImage: "projects/openturner/openturner.png",
     coverAlt: "OpenTurner cover image",
     body:
-      "A wireless, hands-free digital page-turner designed primarily for musicians using tablet-based sheet music.",
+      "A wireless, hands-free digital page-turner designed for musicians using tablet-based sheet music.",
      sections: [
       {
         heading: "Overview",
         body:
-          "Overview here",
+          "This project implements a wireless, hands-free digital page-turner designed primarily for musicians using tablet-based sheet music applications. The device allows users to flip pages or scroll through content using foot pedals, eliminating the need for manual page interaction while performing. It achieves this through a low-power ESP32-C3 microcontroller, Bluetooth HID keyboard emulation, a multi-page OLED user interface, and a web-based configuration portal.",
       },
       {
-        heading: "Design",
-        body:
-          "Notes here",
+        heading: "Microcontroller",
+        body: [
+          "At the core of this embedded system is the Seeed Studio XIAO ESP32C3, which provides:", 
+          "- BLE HID capability for sending key events.",
+          "- Wi-Fi AP mode for hosting a built-in web configuration page.",
+          "- Light-sleep power management with GPIO wake.",
+          "- NVS flash storage for persistent settings.",
+          "- Integrated power management for Li-Ion batteries."
+        ],
         images: [
-          { src: "", alt: "Picture", caption: "Caption." },
+          { src: "projects/openturner/xiao-esp32c3.png", alt: "Seeed Studio XIAO ESP32C3 Pinout", caption: "Seeed Studio XIAO ESP32C3 Pinout." },
+        ],
+      },
+      {
+        heading: "Foot Pedals",
+        body: [
+          "Two foot-operated momentary switches serve as left and right pedals, with each pedal mapping to a user-selectable action: PageUp, PageDown, Arrow Keys, Space, Enter, and Macro (custom sequence of up to 16 keycodes). These actions are sent to the host device via BLE HID.", 
+        ],
+      },
+      {
+        heading: "Display",
+        body: [
+          "The 128×64px SSD1306 display presents a multi-page user interface:",
+          "- Home screen with device name, battery percentage, BLE status, and pedal mappings",
+          "- Pedal Function menus",
+          "- Profile information",
+          "- Battery diagnostics",
+          "- Settings (Wi-Fi toggle, timeout controls)"
+        ],
+      },
+      {
+        heading: "Battery",
+        body: [
+          "A single cell Li-Po battery is used to power the device. To measure battery level, A voltage divider feeds the battery voltage into the ESP32-C3’s ADC. Two equivalent resistors with a large resistance value of 200k Ohms each are used to minimize power draw (~8.25μΩ). The ADC readings are converted to real-time battery voltage and estimated percentage, which appears on both the OLED UI and the web interface.",
         ],
       },
     ],
@@ -215,7 +252,7 @@ export const entries = [
         ],
       },
     ],
-    tags: ["Robotics"],
+    tags: ["Robotics", "SOLIDWORKS"],
     href: "https://github.com/niukevins",
   },
   {
@@ -242,7 +279,7 @@ export const entries = [
         ],
       },
     ],
-    tags: ["Robotics"],
+    tags: ["C/C++", "Oscilloscope", "Microcontroller", "3D Printing", "Soldering", "SOLIDWORKS"],
     href: "https://github.com/niukevins",
   },
   {
@@ -250,10 +287,10 @@ export const entries = [
     label: "Web Development",
     title: "HealthWise",
     date: "February 2025",
-    coverImage: "",
+    coverImage: "projects/healthwise/HealthWise.jpg",
     coverAlt: "HealthWise cover image",
     body:
-      "A web application that empowers communities by predicting disease prevalence across the United States.",
+      "A web application that protects communities by predicting disease prevalence across the United States.",
     sections: [
       {
         heading: "Overview",
@@ -269,7 +306,7 @@ export const entries = [
         ],
       },
     ],
-    tags: ["Robotics"],
+    tags: ["Python", "JavaScript", "React", "Node.js", "SQL"],
     href: "https://github.com/niukevins",
   },
 ];
@@ -328,28 +365,25 @@ export const cvItems = [
     heading: "Skills",
     items: [
       {
-        meta: "Programming",
-        role: " Java, Python, C/C++, JavaScript, Node.js, SQL",
-        organization: "",
-        href: "",
+        meta: "Languages/Frameworks",
+        role: " Java, Python, C/C++, MATLAB, JavaScript, React, Node.js, SQL",
       },
       {
-        meta: "Embedded Systems",
-        role: "STM32, ESP32, Arduino, Raspberry Pi, FreeRTOS, CAN bus, I²C, SPI, UART, PWM",
-        organization: "",
-        href: "",
+        meta: "Electrical",
+        role: "PCB Design, Soldering, Oscilloscope, Microcontroller",
       },
       {
-        meta: "Hardware",
-        role: "VHDL, Verilog, FPGA, Altium Designer, Altera Quartus",
-        organization: "",
-        href: "",
+        meta: "Computing Hardware",
+        role: "FPGA, VHDL, Verilog, Altera Quartus, Cadence Virtuoso, LTSpice",
+      },
+           {
+        meta: "CAD",
+        role: "SOLIDWORKS, Autodesk Inventor",
+        description: "Certified SOLIDWORKS Professional ID: C-S3KRQVUF4Y",
       },
       {
         meta: "Mechanical",
-        role: "SOLIDWORKS (CSWP), Fusion360 CAM, Inventor, 3D Printing, 2-Axis Mill, Lathe, CNC Router, Waterjet",
-        organization: "",
-        href: "",
+        role: "3D Printing, 2-Axis Mill, Lathe, CNC Router, Waterjet",
       },
     ],
   },

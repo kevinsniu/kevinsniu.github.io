@@ -143,7 +143,8 @@ function ContactPopover() {
 }
 
 function PageLink({ route, activeRoute, children }) {
-  const isActive = activeRoute === route || activeRoute.startsWith(`${route}/`);
+  const activeBaseRoute = activeRoute.split("?")[0];
+  const isActive = activeBaseRoute === route || activeBaseRoute.startsWith(`${route}/`);
 
   return (
     <a
@@ -197,10 +198,17 @@ function EntryCard({ entry }) {
   );
 }
 
-function ProjectsPage() {
+function projectTagFromRoute(route) {
+  const queryString = route.split("?")[1] || "";
+  const tag = new URLSearchParams(queryString).get("tag");
+
+  return tag && projectTags.includes(tag) ? tag : "All";
+}
+
+function ProjectsPage({ route = "projects" }) {
   const [query, setQuery] = useState("");
-  const [activeTag, setActiveTag] = useState("All");
-  const [showFilters, setShowFilters] = useState(false);
+  const [activeTag, setActiveTag] = useState(() => projectTagFromRoute(route));
+  const [showFilters, setShowFilters] = useState(() => projectTagFromRoute(route) !== "All");
 
   const filteredEntries = entries.filter((entry) => {
     const searchText = `${entry.title} ${entry.body} ${entry.tags.join(" ")}`.toLowerCase();
@@ -249,7 +257,14 @@ function ProjectsPage() {
               <button
                 key={tag}
                 type="button"
-                onClick={() => setActiveTag(tag)}
+                onClick={() => {
+                  setActiveTag(tag);
+                  window.history.replaceState(
+                    null,
+                    "",
+                    tag === "All" ? "#/projects" : `#/projects?tag=${encodeURIComponent(tag)}`,
+                  );
+                }}
                 className={`rounded-full px-3 py-1 text-xs transition ${
                   activeTag === tag
                     ? "bg-emerald-600 text-white dark:bg-emerald-300 dark:text-zinc-950"
@@ -455,6 +470,33 @@ function ProjectDetailPage({ project }) {
   );
 }
 
+function SkillText({ text }) {
+  const skills = text.split(",").map((skill) => skill.trim()).filter(Boolean);
+
+  if (skills.length <= 1) return text;
+
+  return skills.map((skill, index) => {
+    const isProjectTag = projectTags.includes(skill);
+    const separator = index < skills.length - 1 ? ", " : "";
+
+    return (
+      <span key={`${skill}-${index}`}>
+        {isProjectTag ? (
+          <a
+            className="inline-flex rounded-full border border-zinc-300 bg-zinc-100 px-2.5 py-0.5 text-xl font-normal leading-8 text-zinc-800 transition hover:border-zinc-400 hover:bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-zinc-600 dark:hover:bg-zinc-800"
+            href={`#/projects?tag=${encodeURIComponent(skill)}`}
+          >
+            {skill}
+          </a>
+        ) : (
+          skill
+        )}
+        {separator}
+      </span>
+    );
+  });
+}
+
 function ResumePage() {
   const resumeHref = `${import.meta.env.BASE_URL}Kevin%20Niu%20Resume.pdf`;
 
@@ -471,7 +513,7 @@ function ResumePage() {
                 <article key={`${section.heading}-${item.meta}-${item.role}`}>
                   <p className="text-lg leading-7 text-zinc-500 dark:text-[#aebbe0]">{item.meta}</p>
                   <p className="mt-2 text-xl leading-8 text-zinc-700 dark:text-zinc-300">
-                    {item.role}
+                    {section.heading === "Skills" ? <SkillText text={item.role} /> : item.role}
                     {item.organization ? " at " : ""}
                     {item.organization && item.href ? (
                       <a
@@ -529,7 +571,7 @@ function CurrentPage({ route }) {
     const slug = route.split("/")[1];
     return <ProjectDetailPage project={entries.find((entry) => entry.slug === slug)} />;
   }
-  if (route === "projects") return <ProjectsPage />;
+  if (route === "projects" || route.startsWith("projects?")) return <ProjectsPage key={route} route={route} />;
   if (route === "resume") return <ResumePage />;
   if (route === "about") return <AboutPage />;
   return <ProjectsPage />;
