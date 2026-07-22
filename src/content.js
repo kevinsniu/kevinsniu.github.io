@@ -36,7 +36,7 @@ export const entries = [
       {
         heading: "Background",
         body:
-          "Details coming soon!",
+          "More info coming soon!",
         image: "",
         imageAlt: "Mochi design image",
         images: [
@@ -66,7 +66,7 @@ export const entries = [
       {
         heading: "Background",
         body:
-          "Notes here",
+          "More info coming soon!",
         images: [
           { src: "projects/wacki/wacki.JPG", alt: "Wacki at April 2026 NHRL", caption: "Wacki at April 2026 NHRL" },
         ],
@@ -74,7 +74,7 @@ export const entries = [
       {
         heading: "Background",
         body:
-          "Notes here",
+          "More info coming soon!",
         images: [
           { src: "projects/wacki/wacki-bomb.JPG", alt: "Wacki's titanium arm twists under load", caption: "Wacki's titanium arm twists under load" },
         ],
@@ -96,15 +96,12 @@ export const entries = [
       {
         heading: "Overview",
         body:
-          "Overview here",
+          "More info coming soon!",
       },
       {
         heading: "Design",
         body:
-          "Notes here",
-        images: [
-          { src: "", alt: "Picture", caption: "Caption." },
-        ],
+          "The design notes and supporting visuals are being prepared. More details will be posted here soon.",
       },
     ],
     tags: ["Python", "JavaScript", "React", "Node.js", "SQL"],
@@ -241,15 +238,12 @@ export const entries = [
       {
         heading: "Overview",
         body:
-          "Overview here",
+          "More info coming soon!",
       },
       {
         heading: "Design",
         body:
-          "Notes here",
-        images: [
-          { src: "", alt: "Picture", caption: "Caption." },
-        ],
+          "The design notes and build photos are being prepared. More details will be posted here soon.",
       },
     ],
     tags: ["Robotics", "SOLIDWORKS"],
@@ -268,15 +262,12 @@ export const entries = [
       {
         heading: "Overview",
         body:
-          "Overview here",
+          "More info coming soon!",
       },
       {
         heading: "Design",
         body:
-          "Notes here",
-        images: [
-          { src: "", alt: "Picture", caption: "Caption." },
-        ],
+          "The technical notes and supporting visuals are being prepared. More details will be posted here soon.",
       },
     ],
     tags: ["C/C++", "Oscilloscope", "Microcontroller", "3D Printing", "Soldering", "SOLIDWORKS"],
@@ -295,15 +286,12 @@ export const entries = [
       {
         heading: "Overview",
         body:
-          "Overview here",
+          "More info coming soon!",
       },
       {
         heading: "Design",
         body:
-          "Notes here",
-        images: [
-          { src: "", alt: "Picture", caption: "Caption." },
-        ],
+          "The design notes and supporting visuals are being prepared. More details will be posted here soon.",
       },
     ],
     tags: ["Python", "JavaScript", "React", "Node.js", "SQL"],
