@@ -457,14 +457,16 @@ function ProjectDetailPage({ project }) {
         {sections.map((section) => (
           <ProjectSection key={`${section.heading}-${section.body}`} section={section} />
         ))}
-        <a
-          className="mt-10 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-emerald-700 dark:bg-emerald-300 dark:text-zinc-950 dark:hover:bg-emerald-200"
-          href={project.href}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Open project <ArrowUpRight size={16} />
-        </a>
+        {project.href ? (
+          <a
+            className="mt-10 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-emerald-700 dark:bg-emerald-300 dark:text-zinc-950 dark:hover:bg-emerald-200"
+            href={project.href}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open project <ArrowUpRight size={16} />
+          </a>
+        ) : null}
       </div>
     </article>
   );
