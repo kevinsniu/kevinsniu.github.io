@@ -31,17 +31,27 @@ export const entries = [
       {
         heading: "Overview",
         body:
-          "Mochi is my first personal combat robot.",
+          "After creating Wacki, my 12lb combat robot with RoboJackets, I wanted to create a smaller, more personal robot that I could design and build on my own. Mochi is the result of that effort, featuring a custom anti-gyro flywheel and a compact design that prioritizes speed and maneuverability. The project allowed me to explore new design concepts and experiment with different materials and manufacturing techniques, ultimately resulting in the cutest combat robot I've ever built. Mochi is named after the Japanese rice cake, which is small, round, and surprisingly resilient - much like the robot itself.",
       },
       {
         heading: "Background",
-        body:
-          "More info coming soon!",
-        image: "",
-        imageAlt: "Mochi design image",
+        body: [
+          "Mochi features an unique feature: a custom anti-gyro flywheel. This design allows the robot to maintain stability and control during high-speed maneuvers, creating opportunities for aggressive attacks. The flywheel is designed to counteract the effects of gyroscopic forces caused by the spinning weapon disk, allowing Mochi to turn and pivot quickly without losing control. The flywheel does this by spinning in the opposite direction of the weapon disk, creating a counteracting force that stabilizes the robot. Made out of brass, the flywheel is precision-milled out of brass as it is one of the few materials that is both dense and machinable, allowing for a compact design that doesn't sacrifice ease of manufacturing.",
+        ],
+      },
+      {
+        heading: "Iteration 1: mochi",
+        body: [
+          "The first iteration of mochi performed well in its debut competition, but suffered from durability issues. The 3D printed TPU armor was not printed hot enough, causing it to be prone to shredding during impacts. The drive system was also tuned to be too quick, causing the robot to be difficult to control. This combined with the loss of dampening fron the gyroscopic forces of the weapon meant that mochi was hard to control. Regardless, the robot perfomed well and with additional tuning and improvements, could be a highly competitive robot.",
+          "Battery: RDQ Series 6S 720mAh LiHV",
+          "ESC: TBS Lucid 8S 4in1 ESC",
+          "Drive Motors: Just 'Cuz Robotics Blitz Lite 1604",
+          "Weapon Motor: BadAss 2315-2300Kv",
+          "Receiver: ELRS ER3C-i",
+        ],
         images: [
-          { src: "", alt: "Mochi CAD" },
-          { src: "", alt: "Mochi assembly" },
+          { src: "projects/mochi/mochi-april26.jpg", caption: "Mochi (left) at April NHRL XP 2026", alt: "Mochi at April NHRL XP 2026"},
+          { src: "projects/mochi/mochi-assembly.jpg", caption: "Spare frames being prepared for competition", alt: "Spare frames being prepared for competition"},
         ],
       },
     ],
@@ -109,12 +119,12 @@ export const entries = [
       {
         heading: "Challenges",
         body:
-          "The biggest challenge was balancing ambition with time. With only 36 hours, the team had to narrow the feature set, avoid scope creep, and pivot when the initial chatbot stack proved difficult to integrate smoothly. We also had to make quick product decisions while keeping the experience polished enough for a first demo.",
+          "The biggest challenge was balancing ambition with time. With only 36 hours, we had to narrow the feature set, avoid scope creep, and pivot when the initial chatbot stack proved difficult to integrate smoothly. We also had to make quick product decisions while keeping the experience polished enough for a first demo.",
       },
       {
         heading: "Accomplishments",
         body:
-          "The team shipped a working full-stack app within the hackathon timeline and built an AI-powered discovery experience that felt genuinely useful. The swipe-based exploration flow, saved favorites, and polished end-to-end experience were especially rewarding because they turned a concept into something interactive and presentable in a very short span of time.",
+          "We shipped a working full-stack app within the hackathon timeline and built an AI-powered discovery experience that felt genuinely useful. The swipe-based exploration flow, saved favorites, and polished end-to-end experience were especially rewarding because they turned a concept into something interactive and presentable in a very short span of time.",
       },
       {
         heading: "What’s next",
@@ -122,7 +132,7 @@ export const entries = [
           "Bevy is still version 1, and we plan to improve the recommendation engine, expand social features like recipe rankings and collaborative challenges, and continue refining the AI experience into a true community hub for drink lovers.",
       },
     ],
-    tags: ["JavaScript", "React", "TypeScript", "Tailwind", "Supabase", "Vercel"],
+    tags: ["JavaScript", "React", "TypeScript", "Tailwind", "Supabase", "Vercel", "SQL"],
     href: "https://devpost.com/software/bevy-bswu3n",
   },
   {
@@ -259,7 +269,7 @@ export const entries = [
       {
         heading: "Design",
         body:
-          "The design notes and build photos are being prepared. More details will be posted here soon.",
+          "More details will be posted here soon.",
       },
     ],
     tags: ["Robotics", "SOLIDWORKS"],
@@ -345,7 +355,7 @@ export const entries = [
         ],
       },
     ],
-    tags: ["Analog Electronics", "PID Control", "Op-Amps", "555 Timer", "PWM", "H-Bridge", "Arduino", "3D Printing"],
+    tags: ["Analog Electronics", "PID Control", "C/C++", "Oscilloscope", "Microcontroller", "PWM", "3D Printing"],
   },
   {
     slug: "healthwise",
@@ -453,7 +463,7 @@ export const cvItems = [
     items: [
       {
         meta: "Languages/Frameworks",
-        role: " Java, Python, C/C++, MATLAB, JavaScript, React, Node.js, SQL",
+        role: " Java, Python, C/C++, MATLAB, JavaScript, React, Next.js, SQL",
       },
       {
         meta: "Electrical",
